@@ -5,7 +5,7 @@ all: function
 function: main.o function.o
 	gcc -Wall -Werror main.o function.o -lm
 	
-main.o: smain.c
+main.o: main.c
 	gcc -Wall -Werror -c main.c -lm
 
 function.o: function.c 

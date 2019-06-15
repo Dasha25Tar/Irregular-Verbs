@@ -1,18 +1,15 @@
+.PHONY: clean
+
 all: function
 
 function: main.o function.o
-	gcc -Wall -o main main.o function.o 
-
-test:
-	gcc -Wall -o ctest ctest.c
+	gcc -Wall -Werror -o main main.o function.o -lm
 	
 main.o: main.c
-	gcc -Wall -c main.c 
+	gcc -Wall -Werror -c main.c 
 
 function.o: function.c 
-	gcc -Wall -c function.c 
-
-.PHONY: clean
+	gcc -Wall -Werror -c function.c 
 
 clean:
 	rm -rf main ctest *.o

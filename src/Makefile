@@ -1,3 +1,5 @@
+all: main
+
 function: main.o function.o
 	gcc -Wall -o main main.o function.o 
 

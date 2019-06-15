@@ -1,7 +1,6 @@
 os: linux
 language : C
-script: 
-      - make
+script: make
 compiler: gcc
 
 dist: xenial

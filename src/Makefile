@@ -1,15 +1,15 @@
 .PHONY: all clean
 
-all: bin/function
+all: function
 
-bin/function: build/src/main.o build/src/function.o
-	gcc -Wall -Werror build/src/main.o build/src/function.o -o bin/function -lm
+function: main.o function.o
+	gcc -Wall -Werror main.o function.o -lm
 	
-build/src/main.o: src/main.c
-	gcc -Wall -Werror -c src/main.c -o build/src/main.o
+main.o: smain.c
+	gcc -Wall -Werror -c main.c -lm
 
 function.o: function.c 
-	gcc -Wall -Werror -c src/function.c -o build/src/fuction.o
+	gcc -Wall -Werror -c function.c -lm
 
 clean:
 	rm -rf main ctest *.o

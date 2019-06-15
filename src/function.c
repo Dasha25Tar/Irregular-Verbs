@@ -4,6 +4,8 @@
 #include <string.h>
 #include <stdint.h>
 
+#include "function.h"
+
 typedef struct
 {
     char first[100];

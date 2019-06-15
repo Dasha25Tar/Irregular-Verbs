@@ -1,3 +1,6 @@
-language : c
+os: linux
+language : C
+script: 
+      -make
 compiler: gcc
-script: make
+

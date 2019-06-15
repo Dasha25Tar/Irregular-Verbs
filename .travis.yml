@@ -1,5 +1,5 @@
 os: linux
 language : C
-script: make
+script: all
 compiler: gcc
 dist: xenial

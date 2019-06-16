@@ -10,6 +10,10 @@ main.o: main.c
 
 function.o: function.c 
 	gcc -Wall -Werror -c function.c -lm
+	
+test:
+	gcc -Wall -o ctest ctest.c	
+	
 
 clean:
 	rm -rf main ctest *.o
